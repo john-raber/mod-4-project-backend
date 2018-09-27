@@ -32,7 +32,8 @@ ActiveRecord::Schema.define(version: 2018_09_26_214635) do
 
   create_table "places", force: :cascade do |t|
     t.string "name"
-    t.string "location"
+    t.decimal "lat"
+    t.decimal "lng"
     t.bigint "city_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 2018_09_26_214635) do
 
   create_table "trips", force: :cascade do |t|
     t.bigint "user_id"
+    t.string "name"
     t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
