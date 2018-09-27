@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2018_09_26_214635) do
 
   create_table "places", force: :cascade do |t|
     t.string "name"
+    t.string "img_url"
     t.decimal "lat"
     t.decimal "lng"
     t.bigint "city_id"

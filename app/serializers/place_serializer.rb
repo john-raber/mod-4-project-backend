@@ -1,6 +1,6 @@
 class PlaceSerializer < ActiveModel::Serializer
-  attributes :id, :name, :lat, :lng, :city_id
+  attributes :id, :name, :img_url, :lat, :lng, :city_id
+  has_many :users
   has_many :trips
-  has_many :users, through: :trips
   belongs_to :city
 end
