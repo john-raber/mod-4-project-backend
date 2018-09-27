@@ -1,0 +1,2 @@
+class PlaceTripsController < ApplicationController
+end
