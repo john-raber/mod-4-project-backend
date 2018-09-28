@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2018_09_26_214635) do
     t.bigint "user_id"
     t.string "name"
     t.datetime "date"
+    t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_trips_on_user_id"
