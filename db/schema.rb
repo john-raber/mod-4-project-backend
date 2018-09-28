@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2018_09_26_214635) do
     t.string "img_url"
     t.decimal "lat"
     t.decimal "lng"
+    t.text "description"
     t.bigint "city_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -5,6 +5,7 @@ class CreatePlaces < ActiveRecord::Migration[5.2]
       t.string :img_url
       t.decimal :lat
       t.decimal :lng
+      t.text :description
       t.belongs_to :city, foreign_key: true
 
       t.timestamps
