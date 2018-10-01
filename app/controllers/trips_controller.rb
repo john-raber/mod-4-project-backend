@@ -3,4 +3,19 @@ class TripsController < ApplicationController
     @trips = Trip.all
     render json: @trips
   end
+
+  def create
+    @trip = Trip.create(trip_params)
+    render json: @trip
+  end
+
+  private
+
+  def trip_params
+    params.require(:trip).permit(:name, :date, :comment)
+  end
+
+  def find_trip
+    @trip = Trip.find(params[:id])
+  end
 end
